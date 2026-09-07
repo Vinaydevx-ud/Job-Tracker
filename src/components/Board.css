@@ -1,0 +1,27 @@
+*{
+  margin:0px;
+  padding:0px;
+
+}
+
+body{
+  background-color:white;
+  color:black;
+}
+
+
+
+.Head{
+  margin:10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+}
+.Tagline{
+  margin:5px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+}

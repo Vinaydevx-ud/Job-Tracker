@@ -1,0 +1,40 @@
+.body{
+  margin:0;
+  padding:0;
+}
+
+.heading{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  flex-direction:row;
+
+}
+
+.search-option{
+  padding:15px;
+  height:20px;
+  width:300px;
+  font-size:medium;
+  border:solid 1px gray;
+}
+
+.Add-Button{
+  padding:15px;
+  font-size:medium;
+  background-color:white;
+  border:solid 3px gray;
+  border-radius: 4px;
+
+}
+
+.Job-applications{
+  display:flex;
+  justify-content:space-around;
+  margin:20px;
+}
+
+.Card{
+  margin-top:30px;
+  
+}
