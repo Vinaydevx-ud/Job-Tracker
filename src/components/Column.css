@@ -36,5 +36,23 @@
 
 .Card{
   margin-top:30px;
-  
+}
+
+.Applied h4{
+  color:rgb(177, 10, 10);
+  font-size:30px;
+}
+
+.Interview h4{
+  color:rgb(10, 177, 10);
+  font-size:30px;
+}
+
+.Offer h4{
+  color:rgb(184, 161, 12);
+  font-size:30px;
+}
+.Rejected h4{
+  color:rgb(10, 10, 177);
+  font-size:30px;
 }

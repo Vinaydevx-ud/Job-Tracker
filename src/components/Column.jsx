@@ -54,13 +54,7 @@ const Column = () => {
           <h2>Job Applications</h2>
           <p>{totalApplications}</p>
         </div>
-        <div className="search-bar">
-          <input
-            type="text"
-            placeholder="Search Company or Role"
-            className="search-option"
-          />
-        </div>
+        
         <div>
           <button className="Add-Button" onClick={() => setShowform(true)}>
             + Add Application

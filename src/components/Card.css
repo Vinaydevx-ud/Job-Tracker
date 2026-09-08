@@ -1,8 +1,12 @@
 .Job-Card{
   margin:20px;
   padding:25px;
-  border: solid 2px red;
+  border: solid 3px rgb(14, 115, 100);
   border-radius: 4px;
-  max-width : 300px;
+  min-width : 200px;
+  min-height: 200px;
+  max-width :300px;
+  max-height: 400px;
+
 }
 
