@@ -9,6 +9,8 @@ const Column = () => {
     const savedApplications = JSON.parse(localStorage.getItem("applications"));
     return savedApplications ? savedApplications : [];
   });
+ 
+const [searchedCard,setSearchedCard] = useState("");
 
   const addApplication = (data) => {
     setApplications([...applications, data]);
@@ -22,12 +24,16 @@ const Column = () => {
   const handleStatusChange = (id, newStatus) => {
     setApplications((prev) =>
       prev.map((item) =>
-        item.id === id ? { ...item, status: newStatus } : item,
+        item.id === id ? { ...item, status: newStatus } : item
       ),
     );
   };
 
-  const appliedList = applications.filter(
+  
+
+  
+
+   const appliedList = applications.filter(
     (application) => application.status === "applied",
   );
   const interviewList = applications.filter(
@@ -54,13 +60,26 @@ const Column = () => {
           <h2>Job Applications</h2>
           <p>{totalApplications}</p>
         </div>
-        
+        <div className="search-bar">
+          <input
+            type="text"
+            placeholder="Search Company or Role"
+            className="search-option"
+            value={searchedCard}
+            onChange={(e) => setSearchedCard(e.target.value)}
+          />
+        </div>
         <div>
           <button className="Add-Button" onClick={() => setShowform(true)}>
             + Add Application
           </button>
         </div>
       </div>
+
+      <div className="SearchedCard">
+        
+      </div>
+
       <div className="Job-applications">
         <div className="Applied">
           <h4>Applied</h4>

@@ -10,3 +10,10 @@
 
 }
 
+.Job-Data p{
+  margin:4px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+

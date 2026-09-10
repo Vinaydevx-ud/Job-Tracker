@@ -7,12 +7,12 @@ const Card = ({application,handleStatusChange}) => {
   return (
     <>
       <div className="Job-Card">
-        <div className="Job-Card-Data">
-          <h3>{application.company}</h3>
-          <h2>{application.profile}</h2>
-          <h4>{application.location}</h4>
-          <h4>{application.portal}</h4>
-          <h5>{application.date}</h5>
+        <div className="Job-Data">
+          <p>{application.company}</p>
+          <p>{application.profile}</p>
+          <p>{application.location}</p>
+          <p>{application.portal}</p>
+          <p>{application.date}</p>
         </div>
         <div className="Drop-Down">
           <label>Move To</label>

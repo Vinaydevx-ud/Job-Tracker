@@ -10,7 +10,9 @@
   flex-direction:row;
 
 }
-
+.applications-details p{
+  font-size:larger;
+}
 .search-option{
   padding:15px;
   height:20px;
