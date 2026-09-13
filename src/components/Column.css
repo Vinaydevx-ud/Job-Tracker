@@ -38,6 +38,7 @@
 
 .Card{
   margin-top:30px;
+   flex-direction:column-reverse;
 }
 
 .Applied h4{

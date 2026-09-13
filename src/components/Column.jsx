@@ -10,10 +10,12 @@ const Column = () => {
     return savedApplications ? savedApplications : [];
   });
  
-const [searchedCard,setSearchedCard] = useState("");
+  
+
+
 
   const addApplication = (data) => {
-    setApplications([...applications, data]);
+    setApplications([data,...applications]);
     setShowform(false);
   };
 
@@ -31,6 +33,7 @@ const [searchedCard,setSearchedCard] = useState("");
 
   
 
+  
   
 
    const appliedList = applications.filter(
@@ -60,24 +63,10 @@ const [searchedCard,setSearchedCard] = useState("");
           <h2>Job Applications</h2>
           <p>{totalApplications}</p>
         </div>
-        <div className="search-bar">
-          <input
-            type="text"
-            placeholder="Search Company or Role"
-            className="search-option"
-            value={searchedCard}
-            onChange={(e) => setSearchedCard(e.target.value)}
-          />
-        </div>
-        <div>
-          <button className="Add-Button" onClick={() => setShowform(true)}>
-            + Add Application
-          </button>
-        </div>
-      </div>
 
-      <div className="SearchedCard">
-        
+        <button className="Add-Button" onClick={() => setShowform(true)}>
+          + Add Application
+        </button>
       </div>
 
       <div className="Job-applications">
