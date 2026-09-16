@@ -17,7 +17,13 @@ const Column = () => {
   const addApplication = (data) => {
     setApplications([data,...applications]);
     setShowform(false);
+   
   };
+
+  const handleCancel = () =>{
+    setShowform(false);
+
+  }
 
   useEffect(() => {
     localStorage.setItem("applications", JSON.stringify(applications));
@@ -31,12 +37,15 @@ const Column = () => {
     );
   };
 
-  
+  const handleDelete = (id) => {
+    setApplications((prev) =>
+      prev.filter((item) =>
+        item.id !== id 
+  )
+    );
+  }
 
-  
-  
-
-   const appliedList = applications.filter(
+  const appliedList = applications.filter(
     (application) => application.status === "applied",
   );
   const interviewList = applications.filter(
@@ -57,7 +66,13 @@ const Column = () => {
 
   return (
     <>
-      {showform && <ApplicationForm addApplication={addApplication} />}
+      {showform && (
+        <ApplicationForm
+          addApplication={addApplication}
+          handleCancel={handleCancel}
+          
+        />
+      )}
       <div className="heading">
         <div className="applications-details">
           <h2>Job Applications</h2>
@@ -79,6 +94,7 @@ const Column = () => {
                 key={application.id}
                 application={application}
                 handleStatusChange={handleStatusChange}
+                handleDelete={handleDelete}
               />
             ))}
           </div>
@@ -92,6 +108,7 @@ const Column = () => {
                 key={application.id}
                 application={application}
                 handleStatusChange={handleStatusChange}
+                handleDelete={handleDelete}
               />
             ))}
           </div>
@@ -105,6 +122,7 @@ const Column = () => {
                 key={application.id}
                 application={application}
                 handleStatusChange={handleStatusChange}
+                handleDelete={handleDelete}
               />
             ))}
           </div>
@@ -118,6 +136,7 @@ const Column = () => {
                 key={application.id}
                 application={application}
                 handleStatusChange={handleStatusChange}
+                handleDelete={handleDelete}
               />
             ))}
           </div>

@@ -1,17 +1,25 @@
 import './ApplicationForm.css';
 import {useState} from 'react';
 
-const ApplicationForm = ({ addApplication }) => {
+const ApplicationForm = ({ addApplication,handleCancel }) => {
   const [company, setCompany] = useState("");
   const [profile, setProfile] = useState("");
   const [location, setLocation] = useState("");
   const [date, setDate] = useState("");
   const [portal ,setPortal] = useState("");
+  const [error, setError] = useState("");
  
   
 
   const handleSubmit = (e) =>{
     e.preventDefault();
+    if(!company.trim() || !profile.trim() || !location.trim() || !date.trim() ||!portal.trim()){
+      setError("All details are mandatory *"); 
+      return;
+      
+    }
+  
+
     const data = {
       id: Date.now(),
       company,
@@ -29,8 +37,11 @@ const ApplicationForm = ({ addApplication }) => {
     <>
       <div className="Form">
         <form className="Application-Form" onSubmit={handleSubmit}>
+         
+            {error && <p className="error-message">{error}</p>}
+          
           <div className="Company-Name">
-            <label htmlFor="name ">Company Name</label>
+            <label htmlFor="name ">Company Name </label>
             <input
               id="name"
               type="text"
@@ -79,11 +90,11 @@ const ApplicationForm = ({ addApplication }) => {
               onChange={(e) => setPortal(e.target.value)}
             />
           </div>
-         
-         
 
           <button type="submit">Submit</button>
-          <button type="button">Cancel</button>
+          <button type="button" onClick={handleCancel}>
+            Cancel
+          </button>
         </form>
       </div>
     </>

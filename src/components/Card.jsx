@@ -1,6 +1,6 @@
 import './Card.css'
 
-const Card = ({application,handleStatusChange}) => {
+const Card = ({application,handleStatusChange,handleDelete}) => {
 
   
   
@@ -25,6 +25,11 @@ const Card = ({application,handleStatusChange}) => {
             <option value="offer">Offer</option>
             <option value="rejected">Rejected</option>
           </select>
+        </div>
+        <div className="DeleteButton">
+          <button 
+          value={application.id}
+          onClick={() => handleDelete(application.id)} >Delete</button>
         </div>
       </div>
     </>

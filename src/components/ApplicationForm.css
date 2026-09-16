@@ -21,6 +21,15 @@
   gap: 16px;
 }
 
+.error-message {
+  font-size:20px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:rgb(185, 10, 10);
+  font-weight: bold;
+}
+
 .Application-Form label{
   display: block;
   font-weight: bold;
